@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Parts - ExGaming</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>ExGaming - Order Computer Parts</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="order.html">Order</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>🧩 Choose Your Parts</h2>
+
+    <!-- PROCESSORS -->
+    <section id="processors">
+      <h3>Processors</h3>
+      <label>Intel i5 (Rs.25000)
+        <input type="number" min="0" data-name="Intel i5" data-price="25000" />
+      </label>
+      <label>Ryzen 5 (Rs.27000)
+        <input type="number" min="0" data-name="Ryzen 5" data-price="27000" />
+      </label>
+    </section>
+
+    <!-- GRAPHIC CARDS -->
+    <section id="gpus">
+      <h3>Graphic Cards</h3>
+      <label>RTX 3060 (Rs.75000)
+        <input type="number" min="0" data-name="RTX 3060" data-price="75000" />
+      </label>
+      <label>RX 6600 (Rs.68000)
+        <input type="number" min="0" data-name="RX 6600" data-price="68000" />
+      </label>
+    </section>
+
+    <!-- MOTHERBOARDS -->
+    <section id="motherboards">
+      <h3>Motherboards</h3>
+      <label>ASUS B450 (Rs.18000)
+        <input type="number" min="0" data-name="ASUS B450" data-price="18000" />
+      </label>
+      <label>MSI B550 (Rs.21000)
+        <input type="number" min="0" data-name="MSI B550" data-price="21000" />
+      </label>
+    </section>
+
+    <!-- RAM -->
+    <section id="ram">
+      <h3>Memory (RAM)</h3>
+      <label>8GB DDR4 (Rs.8000)
+        <input type="number" min="0" data-name="8GB DDR4" data-price="8000" />
+      </label>
+      <label>16GB DDR4 (Rs.14000)
+        <input type="number" min="0" data-name="16GB DDR4" data-price="14000" />
+      </label>
+    </section>
+
+    <!-- STORAGE DEVICES -->
+    <section id="storage">
+      <h3>Storage Devices</h3>
+      <label>1TB HDD (Rs.5000)
+        <input type="number" min="0" data-name="1TB HDD" data-price="5000" />
+      </label>
+      <label>512GB SSD (Rs.9000)
+        <input type="number" min="0" data-name="512GB SSD" data-price="9000" />
+      </label>
+    </section>
+
+    <!-- ACTION BUTTONS -->
+    <div>
+      <button onclick="addToCart()">Add to Cart</button>
+      <button onclick="saveFavourite()">❤️ Save Favourite</button>
+      <button onclick="applyFavourite()">⭐ Apply Favourite</button>
+    </div>
+
+    <!-- CART TABLE -->
+    <section id="cart">
+      <h3>🛒 Your Cart</h3>
+      <table border="1" id="cartTable">
+        <tr><th>Item</th><th>Qty</th><th>Price</th><th>Subtotal</th></tr>
+      </table>
+      <h4>Total: Rs. <span id="totalPrice">0</span></h4>
+    </section>
+
+    <button onclick="goToCheckout()">Buy Now</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ExGaming. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
